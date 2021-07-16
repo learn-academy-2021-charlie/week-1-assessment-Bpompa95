@@ -14,9 +14,20 @@ var temp1 = 35
 var temp2 = 350
 var temp3 = 212
 
-  console.log(temp1,'is below boiling point');
-  console.log(temp2,'is above boiling point');
-  console.log(temp3,'is at boiling point');
+const boilingPoint = (temp) => {
+  if (temp < 212 ){
+    return `${temp} is below boiling point`
+  } else if(temp > 212){
+    return `${temp} is above boiling point`
+  } else if(temp === 212){ 
+    return `${temp} is at boiling point`
+
+  }
+}
+
+  console.log(boilingPoint(temp1));
+  console.log(boilingPoint(temp2));
+  console.log(boilingPoint(temp3));
 
 
 
@@ -27,8 +38,11 @@ var temp3 = 212
 var myNumbers1 = [3, 7, 0, 36, -9]
 var myNumbers2 = [8, -7, 22, 9, 13]
 
+let numbers = [3, 7, 0, 36, -9, 8, -7, 22, 9, 13];
+numbers.sort((a, b) => a - b);
+console.log(numbers);
 
-console.log([3, 7, 0, 36, -9, 8, -7, 22, 9, 13].sort(function (a, b) {return a-b}));
+
 
 // --------------------3) Create a function that takes in a string of a single word and returns the string with all letters reversed.
 // Use the test variables provided below. Expected output: "ovarb", "eilrahc"
@@ -36,8 +50,12 @@ console.log([3, 7, 0, 36, -9, 8, -7, 22, 9, 13].sort(function (a, b) {return a-b
 var myString1 = "bravo"
 var myString2 = "charlie"
 
-console.log(['b', 'r','a','v','o'].reverse())
-console.log(['c', 'h','a', 'r', 'l', 'i', 'e'].reverse())
+const str = `bravo, charlie` 
+  var newStr = str.split(``);
+
+
+
+console.log(newStr.reverse().join(``))
 
 // --------------------4) Create a function that takes in two numbers and subtracts the smaller number from the larger number.
 // Use the two sets of test variables provided below. Expected output: 15, 12
@@ -48,8 +66,13 @@ var numberExample2 = 27
 var numberExample3 = 7
 var numberExample4 = 19
 
-console.log(numberExample1 - numberExample2);
-console.log(numberExample4 - numberExample3);
+const doMath = (num1, num2) => {
+  return num1 - num2
+}
+
+console.log(doMath(42 ,27))
+console.log(doMath(19, 7))
+
 
 
 // --------------------5) Copy/paste your code from #4. Refactor your code to also accept non-number edge cases. Inform your user if the variable passed into the subtraction function is not a number.
