@@ -46,7 +46,7 @@ var weekendDays = ["saturday", "sunday"]
 // --------------------5) What will this log?
 
 var dataTypes = ["number", "string", "Boolean"]
-console.log(typeof dataTypes.length)
+// console.log(typeof dataTypes.length)
 
 // a) Your answer:number
 // b) Verify and explain: i got number becuase i know .length is always at the end but since you are using typeof you are going to the beginning. But, this time you're not looking for the index you are looking variable.
